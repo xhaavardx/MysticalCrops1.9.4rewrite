@@ -31,14 +31,14 @@ import java.util.Random;
  * Created by Sword_Korn on 6/13/2016.
  */
 public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantable {
-    public static final PropertyInteger STAGE = PropertyInteger.create("stage", 0, 3);
+    public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 7);
 
     public final String regName;
 
     public MysticalCropBlock(String regName) {
     	super();
         this.regName = regName;
-        this.setDefaultState(this.blockState.getBaseState().withProperty(this.getAgeProperty(),Integer.valueOf(0)));
+        this.setDefaultState(blockState.getBaseState().withProperty(AGE, 0));
         this.setCreativeTab(MysticalCrops.cropsTab);
     }
 
@@ -47,11 +47,11 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
     }
 
     protected PropertyInteger getAge() {
-        return STAGE;
+        return AGE;
     }
 
     public int getHarvestReadyAge() {
-        return 3;
+        return 7;
     }
 
     public boolean isHarvestReady(IBlockState state) {
@@ -139,7 +139,7 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
 
             final ItemStack savedStack = new ItemStack(getHarvestedItem());
 
-            world.setBlockState(pos, state.withProperty(STAGE, 0), 3);
+            world.setBlockState(pos, state.withProperty(AGE, 0), 7);
             final EntityItem entItem = new EntityItem(world, player.posX, player.posY - 1D, player.posZ, savedStack);
             world.spawnEntityInWorld(entItem);
             entItem.onCollideWithPlayer(player);
@@ -152,7 +152,7 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
     @Override
     public void getSubBlocks(Item item, CreativeTabs tab, List list) {
         list.add(new ItemStack(item, 1, 0));
-        list.add(new ItemStack(item, 1, 3));
+        list.add(new ItemStack(item, 1, 7));
     }
 
     @Override
@@ -162,11 +162,11 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, STAGE);
+        return new BlockStateContainer(this, AGE);
     }
 
     protected int getRandomInt(World world) {
-        return MathHelper.getRandomIntegerInRange(world.rand, 1, 3);
+        return MathHelper.getRandomIntegerInRange(world.rand, 1, 7);
     }
 
     @Override
@@ -208,7 +208,7 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
         }
 
         if(age >= getHarvestReadyAge()) {
-            for(int i = 0; i < 3 + fortune; ++i) {
+            for(int i = 0; i < 7 + fortune; ++i) {
                 if(rnd.nextInt(2 * getHarvestReadyAge()) <= age) {
                     ret.add(new ItemStack(this.getSeed(), 1, 0));
                 }

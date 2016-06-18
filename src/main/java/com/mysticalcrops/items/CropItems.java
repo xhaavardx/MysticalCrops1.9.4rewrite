@@ -1,5 +1,6 @@
 package com.mysticalcrops.items;
 
+import com.mysticalcrops.blocks.CropBlocks;
 import com.mysticalcrops.blocks.MysticalCropBlock;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -17,7 +18,7 @@ public class CropItems {
     public static HashMap<MysticalCropBlock, Item> seedsMap = new HashMap<MysticalCropBlock, Item>();
     public static HashMap<MysticalCropBlock, Item> havestedItemMap = new HashMap<MysticalCropBlock, Item>();
 
-    public static Item redstoneSeedItem;
+    public static Item redstoneSeedItem = new MysticalCropSeed("redstoneCropSeed");
 
     public static Item regItem(Item item, String regName) {
         item.setRegistryName(regName);
@@ -42,5 +43,6 @@ public class CropItems {
 
     public static void loadItemRegistry() {
         MCSeeds = new Item[] { redstoneSeedItem };
+        regItem(redstoneSeedItem, "redstoneCropSeed");
     }
 }
