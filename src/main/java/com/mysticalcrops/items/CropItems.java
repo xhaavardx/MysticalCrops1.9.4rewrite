@@ -1,7 +1,11 @@
 package com.mysticalcrops.items;
 
+import com.mysticalcrops.MysticalCrops;
 import com.mysticalcrops.blocks.CropBlocks;
 import com.mysticalcrops.blocks.MysticalCropBlock;
+import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.*;
@@ -18,7 +22,7 @@ public class CropItems {
     public static HashMap<MysticalCropBlock, Item> seedsMap = new HashMap<MysticalCropBlock, Item>();
     public static HashMap<MysticalCropBlock, Item> harvestedItemMap = new HashMap<MysticalCropBlock, Item>();
 
-    public static Item redstoneSeedItem = new MysticalCropSeed(CropBlocks.redstoneCrop, Blocks.FARMLAND, "redstoneCropSeed");
+    public static Item redstoneCropSeed;
 
     public static Item regItem(Item item, String regName) {
         item.setRegistryName(regName);
@@ -27,10 +31,34 @@ public class CropItems {
         return GameRegistry.register(item);
     }
 
-    public static void loadItemRegistry() {
-        regItem(redstoneSeedItem, "redstoneCropSeed");
+    public static Item regSeeds(String regName, Block crop) {
+        Item item = new MysticalCropSeed(crop, Blocks.FARMLAND, regName);
 
-        MCSeeds = new Item[] {redstoneSeedItem};
+        seedsMap.put((MysticalCropBlock) crop, item);
+
+        return regItem(item, regName);
+    }
+
+    public static Item regDrops(Item item, Block crop) {
+        return harvestedItemMap.put((MysticalCropBlock) crop, item);
+    }
+
+    public static void loadItemRegistry() {
+        regSeeds("redstoneCropSeed", CropBlocks.redstoneCrop);
+        regDrops(Items.REDSTONE, CropBlocks.redstoneCrop);
+
+        MCSeeds = new Item[] {redstoneCropSeed};
         MCDrops = new Item[] {Items.REDSTONE};
+    }
+
+    public static void regItemRenderers(Item item) {
+        Minecraft.getMinecraft()
+                .getRenderItem()
+                .getItemModelMesher()
+                .register(item, 0, new ModelResourceLocation(MysticalCrops.MODID + ":" + item.getRegistryName()));
+    }
+
+    public static void regItemRender() {
+        regItemRenderers(redstoneCropSeed);
     }
 }
