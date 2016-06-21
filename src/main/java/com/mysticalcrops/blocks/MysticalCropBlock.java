@@ -14,6 +14,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
@@ -79,7 +80,7 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
     }
 
     protected Item getHarvestedItem() {
-        final Item harvestedItem = CropItems.havestedItemMap.get(this);
+        final Item harvestedItem = CropItems.harvestedItemMap.get(this);
         if(harvestedItem == null) {
             FMLLog.bigWarning("No drop registered!");
             return new Item();
