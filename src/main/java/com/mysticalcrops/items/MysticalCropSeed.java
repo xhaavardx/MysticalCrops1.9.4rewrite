@@ -9,9 +9,8 @@ import net.minecraft.item.ItemSeeds;
  */
 public class MysticalCropSeed extends ItemSeeds{
 
-    public MysticalCropSeed(Block crops, Block soil, String regName) {
+    public MysticalCropSeed(Block crops, Block soil) {
         super(crops, soil);
-        setUnlocalizedName(regName);
         setCreativeTab(MysticalCrops.cropsTab);
     }
 }

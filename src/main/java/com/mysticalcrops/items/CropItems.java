@@ -50,15 +50,4 @@ public class CropItems {
         MCSeeds = new Item[] {redstoneCropSeed};
         MCDrops = new Item[] {Items.REDSTONE};
     }
-
-    public static void regItemRenderers(Item item) {
-        Minecraft.getMinecraft()
-                .getRenderItem()
-                .getItemModelMesher()
-                .register(item, 0, new ModelResourceLocation(MysticalCrops.MODID + ":" + item.getRegistryName()));
-    }
-
-    public static void regItemRender() {
-        regItemRenderers(redstoneCropSeed);
-    }
 }

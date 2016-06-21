@@ -1,6 +1,6 @@
 package com.mysticalcrops.proxy;
 
-import com.mysticalcrops.items.CropItems;
+import com.mysticalcrops.items.CropItemRender;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -19,7 +19,7 @@ public class ClientProxy extends CommonProxy {
     public void init(FMLInitializationEvent e) {
         super.init(e);
 
-        CropItems.regItemRender();
+        CropItemRender.regItemRender();
     }
 
     @Override
