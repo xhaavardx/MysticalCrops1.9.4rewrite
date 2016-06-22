@@ -1,5 +1,6 @@
 package com.mysticalcrops;
 
+import com.mysticalcrops.items.CropItems;
 import com.mysticalcrops.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -25,7 +26,7 @@ public class MysticalCrops {
     public static CreativeTabs cropsTab = new CreativeTabs("Mystical Crops") {
         @Override
         public Item getTabIconItem() {
-            return Items.WHEAT_SEEDS;
+            return CropItems.diamondEssence;
         }
     };
 

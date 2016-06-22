@@ -72,7 +72,7 @@ public class CropItems {
         diamondEssence = regSeeds("diamondEssence", CropBlocks.diamondCrop, false);
         coalEssence = regSeeds("coalEssence", CropBlocks.coalCrop, false);
 
-        MCSeeds = new Item[] {redstoneCropSeed, ironCropSeed, goldCropSeed, lapisCropSeed, diamondCropSeed, coalCropSeed};
-        MCDrops = new Item[] {redstoneEssence, ironEssence, goldEssence, lapisEssence, diamondEssence, coalEssence};
+        MCSeeds = new Item[] {coalCropSeed, ironCropSeed, goldCropSeed, redstoneCropSeed, lapisCropSeed, diamondCropSeed};
+        MCDrops = new Item[] {coalEssence, ironEssence, goldEssence, redstoneEssence, lapisEssence, diamondEssence};
     }
 }
