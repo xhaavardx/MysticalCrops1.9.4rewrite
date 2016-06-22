@@ -40,7 +40,6 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
     	super();
         this.regName = regName;
         this.setDefaultState(blockState.getBaseState().withProperty(AGE, 0));
-        this.setCreativeTab(MysticalCrops.cropsTab);
     }
 
     public boolean isSuitableForPlant(Block soil) {
