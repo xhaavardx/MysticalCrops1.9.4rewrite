@@ -16,6 +16,7 @@ public class CropItemRender {
         reg(CropItems.goldCropSeed);
         reg(CropItems.lapisCropSeed);
         reg(CropItems.diamondCropSeed);
+        reg(CropItems.coalCropSeed);
 
         //Drop renderers
         reg(CropItems.redstoneEssence);
@@ -23,6 +24,7 @@ public class CropItemRender {
         reg(CropItems.goldEssence);
         reg(CropItems.lapisEssence);
         reg(CropItems.diamondEssence);
+        reg(CropItems.coalEssence);
     }
 
     public static void reg(Item item) {
