@@ -40,7 +40,6 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
     	super();
         this.regName = regName;
         this.setDefaultState(blockState.getBaseState().withProperty(AGE, 0));
-        this.setCreativeTab(MysticalCrops.cropsTab);
     }
 
     public boolean isSuitableForPlant(Block soil) {
@@ -147,13 +146,6 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
             return true;
         }
         return false;
-    }
-
-    @SuppressWarnings({"unchecked", "rawtypes"})
-    @Override
-    public void getSubBlocks(Item item, CreativeTabs tab, List list) {
-        list.add(new ItemStack(item, 1, 0));
-        list.add(new ItemStack(item, 1, 7));
     }
 
     @Override

@@ -11,11 +11,12 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  */
 public class CommonProxy {
     public void preInit(FMLPreInitializationEvent e) {
-        CropItems.loadItemRegistry();
+        CropBlocks.loadCropBlocks();
+        CropItems.loadCropItems();
     }
 
     public void init(FMLInitializationEvent e) {
-        CropBlocks.loadCropBlocks();
+
     }
 
     public void postInit(FMLPostInitializationEvent e) {

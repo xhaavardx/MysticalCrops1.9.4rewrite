@@ -7,10 +7,11 @@ import net.minecraft.item.ItemSeeds;
 /**
  * Created by Sword_Korn on 6/18/2016.
  */
-public class MysticalCropSeed extends ItemSeeds{
+public class MysticalCropSeed extends ItemSeeds {
 
-    public MysticalCropSeed(Block crops, Block soil) {
+    public MysticalCropSeed(Block crops, Block soil,String regName) {
         super(crops, soil);
-        setCreativeTab(MysticalCrops.cropsTab);
+        this.setUnlocalizedName(regName);
+        this.setCreativeTab(MysticalCrops.cropsTab);
     }
 }

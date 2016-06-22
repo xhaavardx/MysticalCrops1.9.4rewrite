@@ -1,6 +1,6 @@
 {
   "parent": "mysticalcrops:item/standardSeedItem",
   "textures": {
-    "layer0": "mysticalcrops:items/redstoneCropSeed"
+    "layer0": "mysticalcrops:items/ironCropSeed"
   }
 }
