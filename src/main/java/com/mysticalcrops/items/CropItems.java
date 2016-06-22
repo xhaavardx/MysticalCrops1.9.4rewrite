@@ -6,6 +6,7 @@ import com.mysticalcrops.blocks.MysticalCropBlock;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.*;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.util.HashMap;
@@ -25,6 +26,7 @@ public class CropItems {
     public static Item goldCropSeed;
     public static Item lapisCropSeed;
     public static Item diamondCropSeed;
+    public static Item coalCropSeed;
 
     //Drops
     public static Item redstoneEssence;
@@ -32,6 +34,7 @@ public class CropItems {
     public static Item goldEssence;
     public static Item lapisEssence;
     public static Item diamondEssence;
+    public static Item coalEssence;
 
     public static Item regItem(MysticalCropSeed item, String regName) {
         item.setRegistryName(regName);
@@ -59,6 +62,7 @@ public class CropItems {
         goldCropSeed = regSeeds("goldCropSeed", CropBlocks.goldCrop, true);
         lapisCropSeed = regSeeds("lapisCropSeed", CropBlocks.lapisCrop, true);
         diamondCropSeed = regSeeds("diamondCropSeed", CropBlocks.diamondCrop, true);
+        coalCropSeed = regSeeds("coalCropSeed", CropBlocks.coalCrop, true);
 
         //Register plant drops
         redstoneEssence = regSeeds("redstoneEssence", CropBlocks.redstoneCrop, false);
@@ -66,8 +70,9 @@ public class CropItems {
         goldEssence = regSeeds("goldEssence", CropBlocks.goldCrop, false);
         lapisEssence = regSeeds("lapisEssence", CropBlocks.lapisCrop, false);
         diamondEssence = regSeeds("diamondEssence", CropBlocks.diamondCrop, false);
+        coalEssence = regSeeds("coalEssence", CropBlocks.coalCrop, false);
 
-        MCSeeds = new Item[] {redstoneCropSeed, ironCropSeed, goldCropSeed, lapisCropSeed, diamondCropSeed};
-        MCDrops = new Item[] {redstoneEssence, ironEssence, goldEssence, lapisEssence, diamondEssence};
+        MCSeeds = new Item[] {redstoneCropSeed, ironCropSeed, goldCropSeed, lapisCropSeed, diamondCropSeed, coalCropSeed};
+        MCDrops = new Item[] {redstoneEssence, ironEssence, goldEssence, lapisEssence, diamondEssence, coalEssence};
     }
 }
