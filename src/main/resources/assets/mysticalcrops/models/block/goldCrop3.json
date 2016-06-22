@@ -1,6 +1,6 @@
 {
   "parent": "block/crop",
   "textures": {
-    "cross": "mysticalcrops:blocks/goldCrop3"
+    "crop": "mysticalcrops:blocks/goldCrop3"
   }
 }

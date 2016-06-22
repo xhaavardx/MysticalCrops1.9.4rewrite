@@ -1,6 +1,6 @@
 {
   "parent": "block/crop",
   "textures": {
-    "cross": "mysticalcrops:blocks/redstoneCrop0"
+    "crop": "mysticalcrops:blocks/redstoneCrop0"
   }
 }

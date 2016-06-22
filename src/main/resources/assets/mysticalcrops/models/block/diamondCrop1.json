@@ -1,6 +1,6 @@
 {
   "parent": "block/crop",
   "textures": {
-    "cross": "mysticalcrops:blocks/diamondCrop1"
+    "crop": "mysticalcrops:blocks/diamondCrop1"
   }
 }
