@@ -39,6 +39,14 @@ public class CropItemRender {
         reg(CropItems.silverEssence);
         reg(CropItems.uraniumEssence);
         reg(CropItems.plutoniumEssence);
+
+        //Misc renderers
+        reg(CropItems.ingotCopper);
+        reg(CropItems.ingotTin);
+        reg(CropItems.ingotLead);
+        reg(CropItems.ingotSilver);
+        reg(CropItems.ingotUranium);
+        reg(CropItems.ingotPlutonium);
     }
 
     public static void reg(Item item) {

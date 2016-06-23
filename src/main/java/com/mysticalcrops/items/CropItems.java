@@ -6,8 +6,6 @@ import com.mysticalcrops.blocks.MysticalCropBlock;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.*;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import java.util.HashMap;
@@ -61,14 +59,7 @@ public class CropItems {
     public static Item ingotUranium;
     public static Item ingotPlutonium;
 
-    public static Item regItem(MysticalCropSeed item, String regName) {
-        item.setRegistryName(regName);
-        item.setCreativeTab(MysticalCrops.cropsTab);
-
-        return GameRegistry.register(item);
-    }
-
-    public static Item forgeReg(Item item, String regName) {
+    public static Item regItem(Item item, String regName) {
         item.setRegistryName(regName);
         item.setCreativeTab(MysticalCrops.cropsTab);
 
@@ -83,6 +74,12 @@ public class CropItems {
         }else{
             harvestedItemMap.put((MysticalCropBlock) crop, item);
         }
+
+        return regItem(item, regName);
+    }
+
+    public static Item regMiscItem(String regName) {
+        MysticalCropItem item = new MysticalCropItem(regName);
 
         return regItem(item, regName);
     }
@@ -111,17 +108,23 @@ public class CropItems {
         diamondEssence = regSeeds("diamondEssence", CropBlocks.diamondCrop, false);
         coalEssence = regSeeds("coalEssence", CropBlocks.coalCrop, false);
         emeraldEssence = regSeeds("emeraldEssence", CropBlocks.emeraldCrop, false);
+        copperEssence = regSeeds("copperEssence", CropBlocks.copperCrop, false);
+        tinEssence = regSeeds("tinEssence", CropBlocks.tinCrop, false);
+        leadEssence = regSeeds("leadEssence", CropBlocks.leadCrop, false);
+        silverEssence = regSeeds("silverEssence", CropBlocks.silverCrop, false);
+        uraniumEssence = regSeeds("uraniumEssence", CropBlocks.uraniumCrop, false);
+        plutoniumEssence = regSeeds("plutoniumEssence", CropBlocks.plutoniumCrop, false);
 
         //Register misc items
-        ingotCopper = forgeReg(ingotCopper, "ingotCopper");
-        ingotTin = forgeReg(ingotTin, "ingotTin");
-        ingotLead = forgeReg(ingotLead, "ingotLead");
-        ingotSilver = forgeReg(ingotSilver, "ingotSilver");
-        ingotUranium = forgeReg(ingotUranium, "ingotUranium");
-        ingotPlutonium = forgeReg(ingotPlutonium, "ingotPlutonium");
+        ingotCopper = regMiscItem("ingotCopper");
+        ingotTin = regMiscItem("ingotTin");
+        ingotLead = regMiscItem("ingotLead");
+        ingotSilver = regMiscItem("ingotSilver");
+        ingotUranium = regMiscItem("ingotUranium");
+        ingotPlutonium = regMiscItem("ingotPlutonium");
 
-        MCSeeds = new Item[] {coalCropSeed, ironCropSeed, goldCropSeed, redstoneCropSeed, lapisCropSeed, diamondCropSeed, emeraldCropSeed};
-        MCDrops = new Item[] {coalEssence, ironEssence, goldEssence, redstoneEssence, lapisEssence, diamondEssence, emeraldEssence};
+        MCSeeds = new Item[] {coalCropSeed, copperCropSeed, tinCropSeed, ironCropSeed, leadCropSeed, goldCropSeed, silverCropSeed, redstoneCropSeed, lapisCropSeed, uraniumCropSeed, plutoniumCropSeed, diamondCropSeed, emeraldCropSeed};
+        MCDrops = new Item[] {coalEssence, copperEssence, tinEssence, ironEssence, leadEssence, goldEssence, silverEssence, redstoneEssence, lapisEssence, uraniumEssence, plutoniumEssence, diamondEssence, emeraldEssence};
         MCMisc = new Item[] {ingotCopper, ingotTin, ingotLead, ingotSilver, ingotUranium, ingotPlutonium};
     }
 }
