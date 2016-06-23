@@ -1,6 +1,5 @@
 package com.mysticalcrops.blocks;
 
-import com.mysticalcrops.MysticalCrops;
 import com.mysticalcrops.items.CropItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
@@ -8,13 +7,11 @@ import net.minecraft.block.IGrowable;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;

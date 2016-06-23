@@ -20,9 +20,9 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "1.0"
+version = "1.4"
 group= "com.mysticalcrops" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "mysticalCrops_Alpha_V1"
+archivesBaseName = "mysticalCrops_Beta_ME_V1"
 
 minecraft {
     version = "1.9.4-12.17.0.1960"
