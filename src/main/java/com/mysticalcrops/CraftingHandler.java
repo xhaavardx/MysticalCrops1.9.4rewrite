@@ -24,6 +24,7 @@ public class CraftingHandler {
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.ironEssence, 9, 0), Blocks.IRON_ORE));
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.lapisEssence, 9, 0), new ItemStack(Items.DYE, 1, 4)));
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.diamondEssence, 9, 0), Items.DIAMOND));
+        registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.emeraldEssence, 9, 0), Items.EMERALD));
 
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.COAL, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.coalEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.REDSTONE, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.redstoneEssence));
@@ -31,6 +32,7 @@ public class CraftingHandler {
         registerRecipe(new ShapedOreRecipe(new ItemStack(Blocks.IRON_ORE, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.ironEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.DYE, 1, 4), "XXX", "XXX", "XXX", 'X', CropItems.lapisEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.DIAMOND, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.diamondEssence));
+        registerRecipe(new ShapedOreRecipe(new ItemStack(Items.EMERALD, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.emeraldEssence));
 
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.coalCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.coalEssence, 'Y', Items.WHEAT_SEEDS));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.redstoneCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.redstoneEssence, 'Y', Items.WHEAT_SEEDS));
@@ -38,5 +40,6 @@ public class CraftingHandler {
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ironCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.ironEssence, 'Y', Items.WHEAT_SEEDS));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.lapisCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.lapisEssence, 'Y', Items.WHEAT_SEEDS));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.diamondCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.diamondEssence, 'Y', Items.WHEAT_SEEDS));
+        registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.emeraldCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.emeraldEssence, 'Y', Items.WHEAT_SEEDS));
     }
 }
