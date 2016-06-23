@@ -16,6 +16,12 @@ public class CropBlocks {
     public static Block lapisCrop;
     public static Block diamondCrop;
     public static Block emeraldCrop;
+    public static Block copperCrop;
+    public static Block tinCrop;
+    public static Block leadCrop;
+    public static Block silverCrop;
+    public static Block uraniumCrop;
+    public static Block plutoniumCrop;
 
     public static void loadCropBlocks() {
         redstoneCrop = registerBlockCrop("redstoneCrop");
@@ -25,6 +31,12 @@ public class CropBlocks {
         diamondCrop = registerBlockCrop("diamondCrop");
         coalCrop = registerBlockCrop("coalCrop");
         emeraldCrop = registerBlockCrop("emeraldCrop");
+        copperCrop = registerBlockCrop("copperCrop");
+        tinCrop = registerBlockCrop("tinCrop");
+        leadCrop = registerBlockCrop("leadCrop");
+        silverCrop = registerBlockCrop("silverCrop");
+        uraniumCrop = registerBlockCrop("uraniumCrop");
+        plutoniumCrop = registerBlockCrop("plutoniumCrop");
     }
 
     private static Block registerBlockCrop(String regName) {

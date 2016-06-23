@@ -18,6 +18,12 @@ public class CropItemRender {
         reg(CropItems.diamondCropSeed);
         reg(CropItems.coalCropSeed);
         reg(CropItems.emeraldCropSeed);
+        reg(CropItems.copperCropSeed);
+        reg(CropItems.tinCropSeed);
+        reg(CropItems.leadCropSeed);
+        reg(CropItems.silverCropSeed);
+        reg(CropItems.uraniumCropSeed);
+        reg(CropItems.plutoniumCropSeed);
 
         //Drop renderers
         reg(CropItems.redstoneEssence);
@@ -27,6 +33,12 @@ public class CropItemRender {
         reg(CropItems.diamondEssence);
         reg(CropItems.coalEssence);
         reg(CropItems.emeraldEssence);
+        reg(CropItems.copperEssence);
+        reg(CropItems.tinEssence);
+        reg(CropItems.leadEssence);
+        reg(CropItems.silverEssence);
+        reg(CropItems.uraniumEssence);
+        reg(CropItems.plutoniumEssence);
     }
 
     public static void reg(Item item) {

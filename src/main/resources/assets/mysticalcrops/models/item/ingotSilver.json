@@ -1,0 +1,6 @@
+{
+  "parent": "mysticalcrops:item/standardSeedItem",
+  "textures": {
+    "layer0": "mysticalcrops:items/ingotSilver"
+  }
+}

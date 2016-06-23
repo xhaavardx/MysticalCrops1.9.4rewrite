@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "age=0": { "model":"mysticalcrops:uraniumCrop0" },
+    "age=1": { "model":"mysticalcrops:uraniumCrop0" },
+    "age=2": { "model":"mysticalcrops:uraniumCrop0" },
+    "age=3": { "model":"mysticalcrops:uraniumCrop1" },
+    "age=4": { "model":"mysticalcrops:uraniumCrop1" },
+    "age=5": { "model":"mysticalcrops:uraniumCrop2" },
+    "age=6": { "model":"mysticalcrops:uraniumCrop2" },
+    "age=7": { "model":"mysticalcrops:uraniumCrop3" },
+    "inventory": { "model":"mysticalcrops:uraniumCrop" }
+  }
+}

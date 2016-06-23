@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "age=0": { "model":"mysticalcrops:leadCrop0" },
+    "age=1": { "model":"mysticalcrops:leadCrop0" },
+    "age=2": { "model":"mysticalcrops:leadCrop0" },
+    "age=3": { "model":"mysticalcrops:leadCrop1" },
+    "age=4": { "model":"mysticalcrops:leadCrop1" },
+    "age=5": { "model":"mysticalcrops:leadCrop2" },
+    "age=6": { "model":"mysticalcrops:leadCrop2" },
+    "age=7": { "model":"mysticalcrops:leadCrop3" },
+    "inventory": { "model":"mysticalcrops:leadCrop" }
+  }
+}
