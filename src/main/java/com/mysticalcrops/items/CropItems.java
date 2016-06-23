@@ -27,6 +27,7 @@ public class CropItems {
     public static Item lapisCropSeed;
     public static Item diamondCropSeed;
     public static Item coalCropSeed;
+    public static Item emeraldCropSeed;
 
     //Drops
     public static Item redstoneEssence;
@@ -35,6 +36,7 @@ public class CropItems {
     public static Item lapisEssence;
     public static Item diamondEssence;
     public static Item coalEssence;
+    public static Item emeraldEssence;
 
     public static Item regItem(MysticalCropSeed item, String regName) {
         item.setRegistryName(regName);
@@ -63,6 +65,7 @@ public class CropItems {
         lapisCropSeed = regSeeds("lapisCropSeed", CropBlocks.lapisCrop, true);
         diamondCropSeed = regSeeds("diamondCropSeed", CropBlocks.diamondCrop, true);
         coalCropSeed = regSeeds("coalCropSeed", CropBlocks.coalCrop, true);
+        emeraldCropSeed = regSeeds("emeraldCropSeed", CropBlocks.emeraldCrop, true);
 
         //Register plant drops
         redstoneEssence = regSeeds("redstoneEssence", CropBlocks.redstoneCrop, false);
@@ -71,8 +74,9 @@ public class CropItems {
         lapisEssence = regSeeds("lapisEssence", CropBlocks.lapisCrop, false);
         diamondEssence = regSeeds("diamondEssence", CropBlocks.diamondCrop, false);
         coalEssence = regSeeds("coalEssence", CropBlocks.coalCrop, false);
+        emeraldEssence = regSeeds("emeraldEssence", CropBlocks.emeraldCrop, false);
 
-        MCSeeds = new Item[] {coalCropSeed, ironCropSeed, goldCropSeed, redstoneCropSeed, lapisCropSeed, diamondCropSeed};
-        MCDrops = new Item[] {coalEssence, ironEssence, goldEssence, redstoneEssence, lapisEssence, diamondEssence};
+        MCSeeds = new Item[] {coalCropSeed, ironCropSeed, goldCropSeed, redstoneCropSeed, lapisCropSeed, diamondCropSeed, emeraldCropSeed};
+        MCDrops = new Item[] {coalEssence, ironEssence, goldEssence, redstoneEssence, lapisEssence, diamondEssence, emeraldEssence};
     }
 }

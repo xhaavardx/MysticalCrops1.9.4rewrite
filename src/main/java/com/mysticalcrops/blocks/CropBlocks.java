@@ -9,12 +9,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class CropBlocks {
     // Crops
+    public static Block coalCrop;
     public static Block redstoneCrop;
     public static Block ironCrop;
     public static Block goldCrop;
     public static Block lapisCrop;
     public static Block diamondCrop;
-    public static Block coalCrop;
+    public static Block emeraldCrop;
 
     public static void loadCropBlocks() {
         redstoneCrop = registerBlockCrop("redstoneCrop");
@@ -23,6 +24,7 @@ public class CropBlocks {
         lapisCrop = registerBlockCrop("lapisCrop");
         diamondCrop = registerBlockCrop("diamondCrop");
         coalCrop = registerBlockCrop("coalCrop");
+        emeraldCrop = registerBlockCrop("emeraldCrop");
     }
 
     private static Block registerBlockCrop(String regName) {
