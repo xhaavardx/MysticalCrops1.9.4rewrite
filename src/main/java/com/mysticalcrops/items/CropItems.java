@@ -102,7 +102,7 @@ public class CropItems {
         blazeCropSeed = regSeeds("blazeCropSeed", CropBlocks.blazeCrop, true);
         enderCropSeed = regSeeds("enderCropSeed", CropBlocks.enderCrop, true);
 
-        if(Loader.isModLoaded("IC2")) {
+        if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             copperCropSeed = regSeeds("copperCropSeed", CropBlocks.copperCrop, true);
             tinCropSeed = regSeeds("tinCropSeed", CropBlocks.tinCrop, true);
             leadCropSeed = regSeeds("leadCropSeed", CropBlocks.leadCrop, true);
@@ -123,7 +123,7 @@ public class CropItems {
         blazeEssence = regSeeds("blazeEssence", CropBlocks.blazeCrop, false);
         enderEssence = regSeeds("enderEssence", CropBlocks.enderCrop, false);
 
-        if(Loader.isModLoaded("IC2")) {
+        if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             copperEssence = regSeeds("copperEssence", CropBlocks.copperCrop, false);
             tinEssence = regSeeds("tinEssence", CropBlocks.tinCrop, false);
             leadEssence = regSeeds("leadEssence", CropBlocks.leadCrop, false);
@@ -134,7 +134,7 @@ public class CropItems {
         plutoniumEssence = regSeeds("plutoniumEssence", CropBlocks.plutoniumCrop, false);
 
         //Register misc items
-        if(Loader.isModLoaded("IC2")) {
+        if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             ingotCopper = regMiscItem("ingotCopper");
             ingotTin = regMiscItem("ingotTin");
             ingotLead = regMiscItem("ingotLead");
@@ -144,7 +144,7 @@ public class CropItems {
         ingotUranium = regMiscItem("ingotUranium");
         ingotPlutonium = regMiscItem("ingotPlutonium");
 
-        if(Loader.isModLoaded("IC2")) {
+        if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             OreDictionary.registerOre("ingotCopper", ingotCopper);
             OreDictionary.registerOre("ingotTin", ingotTin);
             OreDictionary.registerOre("ingotLead", ingotLead);

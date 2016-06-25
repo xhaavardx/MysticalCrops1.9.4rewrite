@@ -30,7 +30,7 @@ public class CraftingHandler {
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.blazeEssence, 9, 0), Items.BLAZE_ROD));
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.enderEssence, 9, 0), Items.ENDER_PEARL));
 
-        if(Loader.isModLoaded("IC2")) {
+        if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.copperEssence, 9, 0), "ingotCopper"));
             registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.tinEssence, 9, 0), "ingotTin"));
             registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.leadEssence, 9, 0), "ingotLead"));
@@ -50,7 +50,7 @@ public class CraftingHandler {
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.BLAZE_ROD, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.blazeEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.ENDER_PEARL, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.enderEssence));
 
-        if(Loader.isModLoaded("IC2")) {
+        if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotCopper), "XXX", "XXX", "XXX", 'X', CropItems.copperEssence));
             registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotTin), "XXX", "XXX", "XXX", 'X', CropItems.tinEssence));
             registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotLead), "XXX", "XXX", "XXX", 'X', CropItems.leadEssence));
@@ -70,7 +70,7 @@ public class CraftingHandler {
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.blazeCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.blazeEssence, 'Y', Items.WHEAT_SEEDS));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.enderCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.enderEssence, 'Y', Items.WHEAT_SEEDS));
 
-        if(Loader.isModLoaded("IC2")) {
+        if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.copperCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.copperEssence, 'Y', Items.WHEAT_SEEDS));
             registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.tinCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.tinEssence, 'Y', Items.WHEAT_SEEDS));
             registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.leadCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.leadEssence, 'Y', Items.WHEAT_SEEDS));

@@ -22,7 +22,7 @@ public class CropItemRender {
         reg(CropItems.blazeCropSeed);
         reg(CropItems.enderCropSeed);
 
-        if(Loader.isModLoaded("IC2")) {
+        if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             reg(CropItems.copperCropSeed);
             reg(CropItems.tinCropSeed);
             reg(CropItems.leadCropSeed);
@@ -43,7 +43,7 @@ public class CropItemRender {
         reg(CropItems.blazeEssence);
         reg(CropItems.enderEssence);
 
-        if(Loader.isModLoaded("IC2")) {
+        if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             reg(CropItems.copperEssence);
             reg(CropItems.tinEssence);
             reg(CropItems.leadEssence);
@@ -54,7 +54,7 @@ public class CropItemRender {
         reg(CropItems.plutoniumEssence);
 
         //Misc renderers
-        if(Loader.isModLoaded("IC2")) {
+        if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             reg(CropItems.ingotCopper);
             reg(CropItems.ingotTin);
             reg(CropItems.ingotLead);
