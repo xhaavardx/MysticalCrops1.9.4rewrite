@@ -6,6 +6,7 @@ import com.mysticalcrops.blocks.MysticalCropBlock;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.*;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -30,6 +31,8 @@ public class CropItems {
     public static Item diamondCropSeed;
     public static Item coalCropSeed;
     public static Item emeraldCropSeed;
+    public static Item blazeCropSeed;
+    public static Item enderCropSeed;
     public static Item copperCropSeed;
     public static Item tinCropSeed;
     public static Item leadCropSeed;
@@ -45,6 +48,8 @@ public class CropItems {
     public static Item diamondEssence;
     public static Item coalEssence;
     public static Item emeraldEssence;
+    public static Item blazeEssence;
+    public static Item enderEssence;
     public static Item copperEssence;
     public static Item tinEssence;
     public static Item leadEssence;
@@ -94,10 +99,16 @@ public class CropItems {
         diamondCropSeed = regSeeds("diamondCropSeed", CropBlocks.diamondCrop, true);
         coalCropSeed = regSeeds("coalCropSeed", CropBlocks.coalCrop, true);
         emeraldCropSeed = regSeeds("emeraldCropSeed", CropBlocks.emeraldCrop, true);
-        copperCropSeed = regSeeds("copperCropSeed", CropBlocks.copperCrop, true);
-        tinCropSeed = regSeeds("tinCropSeed", CropBlocks.tinCrop, true);
-        leadCropSeed = regSeeds("leadCropSeed", CropBlocks.leadCrop, true);
-        silverCropSeed = regSeeds("silverCropSeed", CropBlocks.silverCrop, true);
+        blazeCropSeed = regSeeds("blazeCropSeed", CropBlocks.blazeCrop, true);
+        enderCropSeed = regSeeds("enderCropSeed", CropBlocks.enderCrop, true);
+
+        if(Loader.isModLoaded("IC2")) {
+            copperCropSeed = regSeeds("copperCropSeed", CropBlocks.copperCrop, true);
+            tinCropSeed = regSeeds("tinCropSeed", CropBlocks.tinCrop, true);
+            leadCropSeed = regSeeds("leadCropSeed", CropBlocks.leadCrop, true);
+            silverCropSeed = regSeeds("silverCropSeed", CropBlocks.silverCrop, true);
+        }
+
         uraniumCropSeed = regSeeds("uraniumCropSeed", CropBlocks.uraniumCrop, true);
         plutoniumCropSeed = regSeeds("plutoniumCropSeed", CropBlocks.plutoniumCrop, true);
 
@@ -109,30 +120,42 @@ public class CropItems {
         diamondEssence = regSeeds("diamondEssence", CropBlocks.diamondCrop, false);
         coalEssence = regSeeds("coalEssence", CropBlocks.coalCrop, false);
         emeraldEssence = regSeeds("emeraldEssence", CropBlocks.emeraldCrop, false);
-        copperEssence = regSeeds("copperEssence", CropBlocks.copperCrop, false);
-        tinEssence = regSeeds("tinEssence", CropBlocks.tinCrop, false);
-        leadEssence = regSeeds("leadEssence", CropBlocks.leadCrop, false);
-        silverEssence = regSeeds("silverEssence", CropBlocks.silverCrop, false);
+        blazeEssence = regSeeds("blazeEssence", CropBlocks.blazeCrop, false);
+        enderEssence = regSeeds("enderEssence", CropBlocks.enderCrop, false);
+
+        if(Loader.isModLoaded("IC2")) {
+            copperEssence = regSeeds("copperEssence", CropBlocks.copperCrop, false);
+            tinEssence = regSeeds("tinEssence", CropBlocks.tinCrop, false);
+            leadEssence = regSeeds("leadEssence", CropBlocks.leadCrop, false);
+            silverEssence = regSeeds("silverEssence", CropBlocks.silverCrop, false);
+        }
+
         uraniumEssence = regSeeds("uraniumEssence", CropBlocks.uraniumCrop, false);
         plutoniumEssence = regSeeds("plutoniumEssence", CropBlocks.plutoniumCrop, false);
 
         //Register misc items
-        ingotCopper = regMiscItem("ingotCopper");
-        ingotTin = regMiscItem("ingotTin");
-        ingotLead = regMiscItem("ingotLead");
-        ingotSilver = regMiscItem("ingotSilver");
+        if(Loader.isModLoaded("IC2")) {
+            ingotCopper = regMiscItem("ingotCopper");
+            ingotTin = regMiscItem("ingotTin");
+            ingotLead = regMiscItem("ingotLead");
+            ingotSilver = regMiscItem("ingotSilver");
+        }
+
         ingotUranium = regMiscItem("ingotUranium");
         ingotPlutonium = regMiscItem("ingotPlutonium");
 
-        OreDictionary.registerOre("ingotCopper", ingotCopper);
-        OreDictionary.registerOre("ingotTin", ingotTin);
-        OreDictionary.registerOre("ingotLead", ingotLead);
-        OreDictionary.registerOre("ingotSilver", ingotSilver);
+        if(Loader.isModLoaded("IC2")) {
+            OreDictionary.registerOre("ingotCopper", ingotCopper);
+            OreDictionary.registerOre("ingotTin", ingotTin);
+            OreDictionary.registerOre("ingotLead", ingotLead);
+            OreDictionary.registerOre("ingotSilver", ingotSilver);
+        }
+
         OreDictionary.registerOre("ingotUranium", ingotUranium);
         OreDictionary.registerOre("ingotPlutonium", ingotPlutonium);
 
-        MCSeeds = new Item[] {coalCropSeed, copperCropSeed, tinCropSeed, ironCropSeed, leadCropSeed, goldCropSeed, silverCropSeed, redstoneCropSeed, lapisCropSeed, uraniumCropSeed, plutoniumCropSeed, diamondCropSeed, emeraldCropSeed};
-        MCDrops = new Item[] {coalEssence, copperEssence, tinEssence, ironEssence, leadEssence, goldEssence, silverEssence, redstoneEssence, lapisEssence, uraniumEssence, plutoniumEssence, diamondEssence, emeraldEssence};
+        MCSeeds = new Item[] {coalCropSeed, copperCropSeed, tinCropSeed, ironCropSeed, leadCropSeed, goldCropSeed, silverCropSeed, redstoneCropSeed, lapisCropSeed, uraniumCropSeed, plutoniumCropSeed, diamondCropSeed, emeraldCropSeed, blazeCropSeed, enderCropSeed};
+        MCDrops = new Item[] {coalEssence, copperEssence, tinEssence, ironEssence, leadEssence, goldEssence, silverEssence, redstoneEssence, lapisEssence, uraniumEssence, plutoniumEssence, diamondEssence, emeraldEssence, blazeEssence, enderEssence};
         MCMisc = new Item[] {ingotCopper, ingotTin, ingotLead, ingotSilver, ingotUranium, ingotPlutonium};
     }
 }

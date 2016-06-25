@@ -16,6 +16,8 @@ public class CropBlocks {
     public static Block lapisCrop;
     public static Block diamondCrop;
     public static Block emeraldCrop;
+    public static Block blazeCrop;
+    public static Block enderCrop;
     public static Block copperCrop;
     public static Block tinCrop;
     public static Block leadCrop;
@@ -31,6 +33,8 @@ public class CropBlocks {
         diamondCrop = registerBlockCrop("diamondCrop");
         coalCrop = registerBlockCrop("coalCrop");
         emeraldCrop = registerBlockCrop("emeraldCrop");
+        blazeCrop = registerBlockCrop("blazeCrop");
+        enderCrop = registerBlockCrop("enderCrop");
         copperCrop = registerBlockCrop("copperCrop");
         tinCrop = registerBlockCrop("tinCrop");
         leadCrop = registerBlockCrop("leadCrop");

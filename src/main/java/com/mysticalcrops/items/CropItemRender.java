@@ -3,6 +3,7 @@ package com.mysticalcrops.items;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.Loader;
 
 /**
  * Created by Sword_Korn on 6/21/2016.
@@ -18,10 +19,16 @@ public class CropItemRender {
         reg(CropItems.diamondCropSeed);
         reg(CropItems.coalCropSeed);
         reg(CropItems.emeraldCropSeed);
-        reg(CropItems.copperCropSeed);
-        reg(CropItems.tinCropSeed);
-        reg(CropItems.leadCropSeed);
-        reg(CropItems.silverCropSeed);
+        reg(CropItems.blazeCropSeed);
+        reg(CropItems.enderCropSeed);
+
+        if(Loader.isModLoaded("IC2")) {
+            reg(CropItems.copperCropSeed);
+            reg(CropItems.tinCropSeed);
+            reg(CropItems.leadCropSeed);
+            reg(CropItems.silverCropSeed);
+        }
+
         reg(CropItems.uraniumCropSeed);
         reg(CropItems.plutoniumCropSeed);
 
@@ -33,18 +40,27 @@ public class CropItemRender {
         reg(CropItems.diamondEssence);
         reg(CropItems.coalEssence);
         reg(CropItems.emeraldEssence);
-        reg(CropItems.copperEssence);
-        reg(CropItems.tinEssence);
-        reg(CropItems.leadEssence);
-        reg(CropItems.silverEssence);
+        reg(CropItems.blazeEssence);
+        reg(CropItems.enderEssence);
+
+        if(Loader.isModLoaded("IC2")) {
+            reg(CropItems.copperEssence);
+            reg(CropItems.tinEssence);
+            reg(CropItems.leadEssence);
+            reg(CropItems.silverEssence);
+        }
+
         reg(CropItems.uraniumEssence);
         reg(CropItems.plutoniumEssence);
 
         //Misc renderers
-        reg(CropItems.ingotCopper);
-        reg(CropItems.ingotTin);
-        reg(CropItems.ingotLead);
-        reg(CropItems.ingotSilver);
+        if(Loader.isModLoaded("IC2")) {
+            reg(CropItems.ingotCopper);
+            reg(CropItems.ingotTin);
+            reg(CropItems.ingotLead);
+            reg(CropItems.ingotSilver);
+        }
+
         reg(CropItems.ingotUranium);
         reg(CropItems.ingotPlutonium);
     }
