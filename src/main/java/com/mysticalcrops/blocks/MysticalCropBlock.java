@@ -7,13 +7,9 @@ import net.minecraft.block.IGrowable;
 import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
@@ -57,7 +53,6 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
 
     protected Item getSeeds() {
         final Item seeds = CropItems.seedsMap.get(this);
-
         if(seeds == null) {
             FMLLog.bigWarning("No seeds detected!");
             return new Item();
@@ -78,7 +73,7 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
     protected Item getHarvestedItem() {
         final Item harvestedItem = CropItems.harvestedItemMap.get(this);
         if(harvestedItem == null) {
-            FMLLog.bigWarning("No drop registered!");
+            FMLLog.bigWarning("Unexpected drop regsitered!");
             return new Item();
         }
         return harvestedItem;
@@ -124,25 +119,6 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
         Block soilBlock = world.getBlockState(pos.down()).getBlock();
 
         return this.isSuitableForPlant(soilBlock);
-    }
-
-    @Override
-    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
-                                    ItemStack stack, EnumFacing side, float hitX, float hitY, float hitZ) {
-        if(isHarvestReady(state)) {
-            if(world.isRemote) {
-                return true;
-            }
-
-            final ItemStack savedStack = new ItemStack(getHarvestedItem());
-
-            world.setBlockState(pos, state.withProperty(AGE, 0), 7);
-            final EntityItem entItem = new EntityItem(world, player.posX, player.posY - 1D, player.posZ, savedStack);
-            world.spawnEntityInWorld(entItem);
-            entItem.onCollideWithPlayer(player);
-            return true;
-        }
-        return false;
     }
 
     @Override
@@ -193,7 +169,7 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
         for(int i = 0; i < count; i++) {
             Item item = this.getItemDropped(state, rnd, fortune);
             if(item != null) {
-                ret.add(new ItemStack(item, 1, this.damageDropped(state)));
+                ret.add(new ItemStack(item, 4, this.damageDropped(state)));
             }
         }
 

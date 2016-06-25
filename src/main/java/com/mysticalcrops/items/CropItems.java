@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.HashMap;
 
@@ -122,6 +123,13 @@ public class CropItems {
         ingotSilver = regMiscItem("ingotSilver");
         ingotUranium = regMiscItem("ingotUranium");
         ingotPlutonium = regMiscItem("ingotPlutonium");
+
+        OreDictionary.registerOre("ingotCopper", ingotCopper);
+        OreDictionary.registerOre("ingotTin", ingotTin);
+        OreDictionary.registerOre("ingotLead", ingotLead);
+        OreDictionary.registerOre("ingotSilver", ingotSilver);
+        OreDictionary.registerOre("ingotUranium", ingotUranium);
+        OreDictionary.registerOre("ingotPlutonium", ingotPlutonium);
 
         MCSeeds = new Item[] {coalCropSeed, copperCropSeed, tinCropSeed, ironCropSeed, leadCropSeed, goldCropSeed, silverCropSeed, redstoneCropSeed, lapisCropSeed, uraniumCropSeed, plutoniumCropSeed, diamondCropSeed, emeraldCropSeed};
         MCDrops = new Item[] {coalEssence, copperEssence, tinEssence, ironEssence, leadEssence, goldEssence, silverEssence, redstoneEssence, lapisEssence, uraniumEssence, plutoniumEssence, diamondEssence, emeraldEssence};

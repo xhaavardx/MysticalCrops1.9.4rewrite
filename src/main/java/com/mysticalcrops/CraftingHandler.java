@@ -6,6 +6,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
@@ -25,7 +26,7 @@ public class CraftingHandler {
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.lapisEssence, 9, 0), new ItemStack(Items.DYE, 1, 4)));
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.diamondEssence, 9, 0), Items.DIAMOND));
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.emeraldEssence, 9, 0), Items.EMERALD));
-        registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.copperEssence, 9, 0), CropItems.ingotCopper));
+        registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.copperEssence, 9, 0), OreDictionary.getOres("ingotCopper").get(1)));
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.tinEssence, 9, 0), CropItems.ingotTin));
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.leadEssence, 9, 0), CropItems.ingotLead));
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.silverEssence, 9, 0), CropItems.ingotSilver));
@@ -39,7 +40,7 @@ public class CraftingHandler {
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.DYE, 1, 4), "XXX", "XXX", "XXX", 'X', CropItems.lapisEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.DIAMOND, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.diamondEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.EMERALD, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.emeraldEssence));
-        registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotCopper, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.copperEssence));
+        registerRecipe(new ShapedOreRecipe(OreDictionary.getOres("ingotCopper").get(0), "XXX", "XXX", "XXX", 'X', CropItems.copperEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotTin, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.tinEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotLead, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.leadEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotSilver, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.silverEssence));
@@ -53,5 +54,6 @@ public class CraftingHandler {
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.lapisCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.lapisEssence, 'Y', Items.WHEAT_SEEDS));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.diamondCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.diamondEssence, 'Y', Items.WHEAT_SEEDS));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.emeraldCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.emeraldEssence, 'Y', Items.WHEAT_SEEDS));
+        registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.copperCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.copperEssence, 'Y', Items.WHEAT_SEEDS));
     }
 }
