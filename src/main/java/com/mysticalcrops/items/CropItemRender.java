@@ -21,6 +21,8 @@ public class CropItemRender {
         reg(CropItems.emeraldCropSeed);
         reg(CropItems.blazeCropSeed);
         reg(CropItems.enderCropSeed);
+        reg(CropItems.prismShardCropSeed);
+        reg(CropItems.prismCrystalCropSeed);
 
         if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             reg(CropItems.copperCropSeed);
@@ -42,6 +44,8 @@ public class CropItemRender {
         reg(CropItems.emeraldEssence);
         reg(CropItems.blazeEssence);
         reg(CropItems.enderEssence);
+        reg(CropItems.prismShardEssence);
+        reg(CropItems.prismCrystalEssence);
 
         if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             reg(CropItems.copperEssence);
@@ -59,6 +63,14 @@ public class CropItemRender {
             reg(CropItems.ingotTin);
             reg(CropItems.ingotLead);
             reg(CropItems.ingotSilver);
+        }
+
+        if(Loader.isModLoaded("FunOres")) {
+            reg(CropItems.ingotNickel);
+            reg(CropItems.ingotPlatinum);
+            reg(CropItems.ingotAluminum);
+            reg(CropItems.ingotZinc);
+            reg(CropItems.ingotTitanium);
         }
 
         reg(CropItems.ingotUranium);

@@ -16,12 +16,20 @@ public class CropBlocks {
     public static Block lapisCrop;
     public static Block diamondCrop;
     public static Block emeraldCrop;
+    public static Block glowCrop;
     public static Block blazeCrop;
     public static Block enderCrop;
+    public static Block prismShardCrop;
+    public static Block prismCrystalCrop;
     public static Block copperCrop;
     public static Block tinCrop;
     public static Block leadCrop;
     public static Block silverCrop;
+    public static Block nickelCrop;
+    public static Block platinumCrop;
+    public static Block aluminiumCrop;
+    public static Block zincCrop;
+    public static Block titaniumCrop;
     public static Block uraniumCrop;
     public static Block plutoniumCrop;
 
@@ -33,12 +41,20 @@ public class CropBlocks {
         diamondCrop = registerBlockCrop("diamondCrop");
         coalCrop = registerBlockCrop("coalCrop");
         emeraldCrop = registerBlockCrop("emeraldCrop");
+        glowCrop = registerBlockCrop("glowCrop");
         blazeCrop = registerBlockCrop("blazeCrop");
         enderCrop = registerBlockCrop("enderCrop");
+        prismShardCrop = registerBlockCrop("prismShardCrop");
+        prismCrystalCrop = registerBlockCrop("prismCrystalCrop");
         copperCrop = registerBlockCrop("copperCrop");
         tinCrop = registerBlockCrop("tinCrop");
         leadCrop = registerBlockCrop("leadCrop");
         silverCrop = registerBlockCrop("silverCrop");
+        nickelCrop = registerBlockCrop("nickelCrop");
+        platinumCrop = registerBlockCrop("platinumCrop");
+        aluminiumCrop = registerBlockCrop("aluminiumCrop");
+        zincCrop = registerBlockCrop("zincCrop");
+        titaniumCrop = registerBlockCrop("titaniumCrop");
         uraniumCrop = registerBlockCrop("uraniumCrop");
         plutoniumCrop = registerBlockCrop("plutoniumCrop");
     }

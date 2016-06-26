@@ -7,7 +7,7 @@
     "age=4": { "model":"mysticalcrops:baseCrop1" },
     "age=5": { "model":"mysticalcrops:baseCrop2" },
     "age=6": { "model":"mysticalcrops:baseCrop2" },
-    "age=7": { "model":"mysticalcrops:uraniumCrop3" },
-    "inventory": { "model":"mysticalcrops:uraniumCrop" }
+    "age=7": { "model":"mysticalcrops:prismCrystalCrop3" },
+    "inventory": { "model":"mysticalcrops:prismCrystalCrop" }
   }
 }

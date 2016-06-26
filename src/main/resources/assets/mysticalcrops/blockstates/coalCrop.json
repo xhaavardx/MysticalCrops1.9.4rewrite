@@ -1,12 +1,12 @@
 {
   "variants": {
-    "age=0": { "model":"mysticalcrops:coalCrop0" },
-    "age=1": { "model":"mysticalcrops:coalCrop0" },
-    "age=2": { "model":"mysticalcrops:coalCrop0" },
-    "age=3": { "model":"mysticalcrops:coalCrop1" },
-    "age=4": { "model":"mysticalcrops:coalCrop1" },
-    "age=5": { "model":"mysticalcrops:coalCrop2" },
-    "age=6": { "model":"mysticalcrops:coalCrop2" },
+    "age=0": { "model":"mysticalcrops:baseCrop0" },
+    "age=1": { "model":"mysticalcrops:baseCrop0" },
+    "age=2": { "model":"mysticalcrops:baseCrop0" },
+    "age=3": { "model":"mysticalcrops:baseCrop1" },
+    "age=4": { "model":"mysticalcrops:baseCrop1" },
+    "age=5": { "model":"mysticalcrops:baseCrop2" },
+    "age=6": { "model":"mysticalcrops:baseCrop2" },
     "age=7": { "model":"mysticalcrops:coalCrop3" },
     "inventory": { "model":"mysticalcrops:coalCrop" }
   }

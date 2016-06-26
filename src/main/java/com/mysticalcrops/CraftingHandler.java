@@ -57,6 +57,14 @@ public class CraftingHandler {
             registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotSilver), "XXX", "XXX", "XXX", 'X', CropItems.silverEssence));
         }
 
+        if(Loader.isModLoaded("FunOres")) {
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotNickel), "XXX", "XXX", "XXX", 'X', "nuggetNickel"));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotPlatinum), "XXX", "XXX", "XXX", 'X', "nuggetPlatinum"));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotAluminum), "XXX", "XXX", "XXX", 'X', "nuggetAluminum"));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotZinc), "XXX", "XXX", "XXX", 'X', "nuggetZinc"));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotTitanium), "XXX", "XXX", "XXX", 'X', "nuggetTitanium"));
+        }
+
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotUranium), "XXX", "XXX", "XXX", 'X', CropItems.uraniumEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotPlutonium), "XXX", "XXX", "XXX", 'X', CropItems.plutoniumEssence));
 
@@ -71,10 +79,18 @@ public class CraftingHandler {
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.enderCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.enderEssence, 'Y', Items.WHEAT_SEEDS));
 
         if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
-            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.copperCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.copperEssence, 'Y', Items.WHEAT_SEEDS));
-            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.tinCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.tinEssence, 'Y', Items.WHEAT_SEEDS));
-            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.leadCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.leadEssence, 'Y', Items.WHEAT_SEEDS));
-            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.silverCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.silverEssence, 'Y', Items.WHEAT_SEEDS));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.copperCropSeed, 1, 0), " X ", "XYX", " X ", 'X', "nuggetCopper", 'Y', Items.WHEAT_SEEDS));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.tinCropSeed, 1, 0), " X ", "XYX", " X ", 'X', "nuggetTin", 'Y', Items.WHEAT_SEEDS));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.leadCropSeed, 1, 0), " X ", "XYX", " X ", 'X', "nuggetLead", 'Y', Items.WHEAT_SEEDS));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.silverCropSeed, 1, 0), " X ", "XYX", " X ", 'X', "nuggetSilver", 'Y', Items.WHEAT_SEEDS));
+        }
+
+        if(Loader.isModLoaded("FunOres")) {
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.nickelCropSeed, 1, 0), " X ", "XYX", " X ", 'X', "nuggetNickel", 'Y', Items.WHEAT_SEEDS));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.platinumCropSeed, 1, 0), " X ", "XYX", " X ", 'X', "nuggetPlatinum", 'Y', Items.WHEAT_SEEDS));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.aluminiumCropSeed, 1, 0), " X ", "XYX", " X ", 'X', "nuggetAluminum", 'Y', Items.WHEAT_SEEDS));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.zincCropSeed, 1, 0), " X ", "XYX", " X ", 'X', "nuggetZinc", 'Y', Items.WHEAT_SEEDS));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.titaniumCropSeed, 1, 0), " X ", "XYX", " X ", 'X', "nuggetTitanium", 'Y', Items.WHEAT_SEEDS));
         }
 
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.uraniumCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.uraniumEssence, 'Y', Items.WHEAT_SEEDS));
