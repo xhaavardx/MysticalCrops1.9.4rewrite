@@ -23,12 +23,21 @@ public class CropItemRender {
         reg(CropItems.enderCropSeed);
         reg(CropItems.prismShardCropSeed);
         reg(CropItems.prismCrystalCropSeed);
+        reg(CropItems.glowCropSeed);
 
         if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             reg(CropItems.copperCropSeed);
             reg(CropItems.tinCropSeed);
             reg(CropItems.leadCropSeed);
             reg(CropItems.silverCropSeed);
+        }
+
+        if(Loader.isModLoaded("FunOres")) {
+            reg(CropItems.nickelCropSeed);
+            reg(CropItems.platinumCropSeed);
+            reg(CropItems.aluminiumCropSeed);
+            reg(CropItems.zincCropSeed);
+            reg(CropItems.titaniumCropSeed);
         }
 
         reg(CropItems.uraniumCropSeed);
@@ -46,12 +55,21 @@ public class CropItemRender {
         reg(CropItems.enderEssence);
         reg(CropItems.prismShardEssence);
         reg(CropItems.prismCrystalEssence);
+        reg(CropItems.glowEssence);
 
         if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             reg(CropItems.copperEssence);
             reg(CropItems.tinEssence);
             reg(CropItems.leadEssence);
             reg(CropItems.silverEssence);
+        }
+
+        if(Loader.isModLoaded("FunOres")) {
+            reg(CropItems.nickelEssence);
+            reg(CropItems.platinumEssence);
+            reg(CropItems.aluminiumEssence);
+            reg(CropItems.zincEssence);
+            reg(CropItems.titaniumEssence);
         }
 
         reg(CropItems.uraniumEssence);

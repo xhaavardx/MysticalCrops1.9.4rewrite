@@ -29,12 +29,23 @@ public class CraftingHandler {
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.emeraldEssence, 9, 0), Items.EMERALD));
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.blazeEssence, 9, 0), Items.BLAZE_ROD));
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.enderEssence, 9, 0), Items.ENDER_PEARL));
+        registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.prismShardEssence, 9, 0), Items.PRISMARINE_SHARD));
+        registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.prismCrystalEssence, 9, 0), Items.PRISMARINE_CRYSTALS));
+        registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.glowEssence, 9, 0), Items.GLOWSTONE_DUST));
 
         if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.copperEssence, 9, 0), "ingotCopper"));
             registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.tinEssence, 9, 0), "ingotTin"));
             registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.leadEssence, 9, 0), "ingotLead"));
             registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.silverEssence, 9, 0), "ingotSilver"));
+        }
+
+        if(Loader.isModLoaded("FunOres")) {
+            registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.nickelEssence, 9, 0), "ingotNickel"));
+            registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.platinumEssence, 9, 0), "ingotPlatinum"));
+            registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.aluminiumEssence, 9, 0), "ingotAluminum"));
+            registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.zincEssence, 9, 0), "ingotZinc"));
+            registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.titaniumEssence, 9, 0), "ingotTitanium"));
         }
 
         registerRecipe(new ShapelessOreRecipe(new ItemStack(CropItems.uraniumEssence, 9, 0), "ingotUranium"));
@@ -49,12 +60,15 @@ public class CraftingHandler {
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.EMERALD, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.emeraldEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.BLAZE_ROD, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.blazeEssence));
         registerRecipe(new ShapedOreRecipe(new ItemStack(Items.ENDER_PEARL, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.enderEssence));
+        registerRecipe(new ShapedOreRecipe(new ItemStack(Items.PRISMARINE_SHARD, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.prismShardEssence));
+        registerRecipe(new ShapedOreRecipe(new ItemStack(Items.PRISMARINE_CRYSTALS, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.prismCrystalEssence));
+        registerRecipe(new ShapedOreRecipe(new ItemStack(Items.GLOWSTONE_DUST, 1, 0), "XXX", "XXX", "XXX", 'X', CropItems.glowEssence));
 
         if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
-            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotCopper), "XXX", "XXX", "XXX", 'X', CropItems.copperEssence));
-            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotTin), "XXX", "XXX", "XXX", 'X', CropItems.tinEssence));
-            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotLead), "XXX", "XXX", "XXX", 'X', CropItems.leadEssence));
-            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotSilver), "XXX", "XXX", "XXX", 'X', CropItems.silverEssence));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotCopper), "XXX", "XXX", "XXX", 'X', "nuggetCopper"));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotTin), "XXX", "XXX", "XXX", 'X', "nuggetTin"));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotLead), "XXX", "XXX", "XXX", 'X', "nuggetLead"));
+            registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.ingotSilver), "XXX", "XXX", "XXX", 'X', "nuggetSilver"));
         }
 
         if(Loader.isModLoaded("FunOres")) {
@@ -77,6 +91,9 @@ public class CraftingHandler {
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.emeraldCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.emeraldEssence, 'Y', Items.WHEAT_SEEDS));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.blazeCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.blazeEssence, 'Y', Items.WHEAT_SEEDS));
         registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.enderCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.enderEssence, 'Y', Items.WHEAT_SEEDS));
+        registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.prismShardCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.prismShardEssence, 'Y', Items.WHEAT_SEEDS));
+        registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.prismCrystalCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.prismCrystalEssence, 'Y', Items.WHEAT_SEEDS));
+        registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.glowCropSeed, 1, 0), " X ", "XYX", " X ", 'X', CropItems.glowEssence, 'Y', Items.WHEAT_SEEDS));
 
         if(Loader.isModLoaded("IC2") || Loader.isModLoaded("FunOres")) {
             registerRecipe(new ShapedOreRecipe(new ItemStack(CropItems.copperCropSeed, 1, 0), " X ", "XYX", " X ", 'X', "nuggetCopper", 'Y', Items.WHEAT_SEEDS));

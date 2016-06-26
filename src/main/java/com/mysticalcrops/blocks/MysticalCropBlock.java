@@ -176,7 +176,7 @@ public class MysticalCropBlock extends BlockCrops implements IGrowable, IPlantab
         if(age >= getHarvestReadyAge()) {
             for(int i = 0; i < 7 + fortune; ++i) {
                 if(rnd.nextInt(2 * getHarvestReadyAge()) <= age) {
-                    ret.add(new ItemStack(this.getSeed(), 1, 0));
+                    ret.add(new ItemStack(this.getSeeds(), 1, 0));
                 }
             }
         }

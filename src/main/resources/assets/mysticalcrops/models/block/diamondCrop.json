@@ -1,6 +1,6 @@
 {
   "parent": "mysticalcrops:item/standardSeedItem",
   "textures": {
-    "layer0": "mysticalcrops:blocks/diamondCrop0"
+    "layer0": "mysticalcrops:blocks/diamondCrop3"
   }
 }
